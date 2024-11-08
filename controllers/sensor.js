@@ -12,11 +12,26 @@ exports.getSensorData = async (req, res) => {
 
 // Controller to save sensor data to MongoDB
 exports.saveSensorData = async (req, res) => {
-  const { phValue, moisture } = req.body;
+  const {
+    phValue,
+    moisture,
+    teaNitro,
+    teaPhos,
+    teaPota,
+    comNitro,
+    comPhos,
+    comPota,
+  } = req.body;
 
   const newSensorData = new Sensor({
     phValue: phValue || 7, // Default pH value if not provided
     moisture: moisture || 50, // Default moisture value if not provided
+    teaNitro: teaNitro || 0, // Default teaNitro value if not provided
+    teaPhos: teaPhos || 0, // Default teaPhos value if not provided
+    teaPota: teaPota || 0, // Default teaPota value if not provided
+    comNitro: comNitro || 0, // Default comNitro value if not provided
+    comPhos: comPhos || 0, // Default comPhos value if not provided
+    comPota: comPota || 0, // Default comPota value if not provided
   });
 
   try {

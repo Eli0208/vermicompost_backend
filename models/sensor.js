@@ -12,6 +12,30 @@ const sensorSchema = new mongoose.Schema({
     required: true,
     default: 50,
   },
+  teaNitro: {
+    type: Number,
+    default: 0,
+  },
+  teaPhos: {
+    type: Number,
+    default: 0,
+  },
+  teaPota: {
+    type: Number,
+    default: 0,
+  },
+  comNitro: {
+    type: Number,
+    default: 0,
+  },
+  comPhos: {
+    type: Number,
+    default: 0,
+  },
+  comPota: {
+    type: Number,
+    default: 0,
+  },
   createdAt: {
     type: Date,
     default: Date.now,
